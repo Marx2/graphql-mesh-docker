@@ -6,6 +6,9 @@ on:
       - "main"
     tags:
       - '*'
+    permissions:
+      packages: write
+      contents: read
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -24,8 +27,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-             name/app
-             ghcr.io/username/app
+             ${{ REGISTRY }}/${{ IMAGE_NAME }}
           tags: |
             type=schedule
             type=ref,event=branch
