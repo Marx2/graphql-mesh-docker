@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - "main"
+    tags:
+      - '*'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -11,9 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
+        uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: name/app
       - name: Login to GHCR
         uses: docker/login-action@v2
         with:
@@ -26,6 +33,8 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: |
-            ghcr.io/marx2/graphql-mesh:latest
-            ghcr.io/marx2/graphql-mesh:1.0.${{ github.run_number }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # tags: |
+          # ghcr.io/marx2/${{ github.repository }}:latest
+          # ghcr.io/marx2/${{ github.repository }}:1.0.${{ github.run_number }}
