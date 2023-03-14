@@ -23,6 +23,9 @@ RUN yarn add graphql @graphql-mesh/runtime @graphql-mesh/cli @graphql-mesh/opena
   @graphql-mesh/transform-filter-schema \
   @graphql-mesh/transform-naming-convention \
   @graphql-mesh/merger-federation \
+  @graphql-mesh/postgraphile \
+  @graphile/federation \
+  @graphile-contrib/pg-many-to-many \
   && yarn install --frozen-lockfile --immutable --immutable-cache --check-cache --production && yarn cache clean \
   && chown -R node /home/node/app
 USER node
