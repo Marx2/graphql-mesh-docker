@@ -22,6 +22,7 @@ RUN yarn add graphql @graphql-mesh/runtime @graphql-mesh/cli @graphql-mesh/opena
   @graphql-mesh/transform-federation \
   @graphql-mesh/transform-filter-schema \
   @graphql-mesh/transform-naming-convention \
+  @graphql-mesh/transform-type-merging \
   @graphql-mesh/merger-federation \
   @graphql-mesh/postgraphile \
   @graphile-contrib/pg-many-to-many \
