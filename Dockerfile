@@ -7,12 +7,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV NODE_ENV production
 WORKDIR /home/node/app
 COPY --chown=node . .
-RUN yarn add graphql @graphql-mesh/runtime @graphql-mesh/cli @graphql-mesh/openapi @graphql-mesh/graphql \
+RUN yarn add graphql @graphql-mesh/runtime \
+  @graphql-mesh/cli \ 
+  @graphql-mesh/graphql \
   @graphql-mesh/openapi \
   @graphql-mesh/json-schema \
-  @graphql-mesh/graphql \
-  @graphql-mesh/mysql \
-  @graphql-mesh/transform-federation \
   @graphql-mesh/transform-rename \
   @graphql-mesh/transform-prefix \
   @graphql-mesh/transform-cache \
