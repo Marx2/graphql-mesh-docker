@@ -1,4 +1,4 @@
-FROM node:19-bullseye-slim
+FROM node:20-bullseye-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
     yarn \
@@ -8,7 +8,7 @@ ENV NODE_ENV production
 WORKDIR /home/node/app
 COPY --chown=node . .
 RUN yarn add graphql @graphql-mesh/runtime \
-  @graphql-mesh/cli \ 
+  @graphql-mesh/cli \
   @graphql-mesh/graphql \
   @graphql-mesh/openapi \
   @graphql-mesh/json-schema \
