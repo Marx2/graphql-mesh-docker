@@ -8,9 +8,9 @@ ENV NODE_ENV production
 WORKDIR /home/node/app
 COPY --chown=node . .
 RUN yarn add graphql @graphql-mesh/runtime \
-  @graphql-mesh/cli@0.82.35 \
-  @graphql-mesh/graphql@1.0.0 \
-  @graphql-mesh/openapi@0.35.26 \
+  @graphql-mesh/cli \
+  @graphql-mesh/graphql \
+  @graphql-mesh/openapi \
   @graphql-mesh/json-schema \
   @graphql-mesh/transform-rename \
   @graphql-mesh/transform-prefix \
