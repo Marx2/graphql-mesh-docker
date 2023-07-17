@@ -1,3 +1,6 @@
 node_modules
 yarn_lock
 /graphql-mesh-docker.iml
+/.meshrc.yaml
+/build.sh
+/run.sh
