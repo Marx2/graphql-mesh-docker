@@ -28,7 +28,7 @@
     "@graphql-mesh/transform-naming-convention": "^0.96.2",
     "@graphql-mesh/transform-prefix": "^0.96.2",
     "@graphql-mesh/transform-rename": "^0.97.3",
-    "@graphql-mesh/transform-resolvers-composition": "^0.96.2",
+    "@graphql-mesh/transform-resolvers-composition": "^0.98.3",
     "@graphql-mesh/transform-snapshot": "^0.14.65",
     "@graphql-mesh/transform-type-merging": "^0.96.2",
     "graphql": "^16.8.1"
