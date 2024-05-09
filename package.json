@@ -30,7 +30,7 @@
     "@graphql-mesh/transform-rename": "^0.97.3",
     "@graphql-mesh/transform-resolvers-composition": "^0.96.2",
     "@graphql-mesh/transform-snapshot": "^0.14.65",
-    "@graphql-mesh/transform-type-merging": "^0.96.2",
+    "@graphql-mesh/transform-type-merging": "^0.98.4",
     "graphql": "^16.8.1"
   }
 }
