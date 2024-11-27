@@ -23,7 +23,7 @@
     "@graphql-mesh/runtime": "^0.105.4",
     "@graphql-mesh/transform-cache": "^0.96.2",
     "@graphql-mesh/transform-federation": "^0.96.2",
-    "@graphql-mesh/transform-filter-schema": "^0.97.3",
+    "@graphql-mesh/transform-filter-schema": "^0.103.4",
     "@graphql-mesh/transform-mock": "^0.15.6",
     "@graphql-mesh/transform-naming-convention": "^0.102.13",
     "@graphql-mesh/transform-prefix": "^0.103.4",
